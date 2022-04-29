@@ -1,0 +1,54 @@
+.login {
+  width: 100%;
+  background: #f6f3f3;
+  padding: 30px 0;
+  &-content {
+    width: 1140px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  &-form {
+    margin: 0 auto;
+    background: #fafafa;
+    width: 420px;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+  }
+  &-submit {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    margin-bottom: 10px;
+  }
+  &-direct {
+    display: flex;
+    &-item {
+      width: 200px;
+
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      &:first-child {
+        background: #3b5998;
+        margin-right: 10px;
+      }
+      &:last-child {
+        background: #e02f2f;
+      }
+    }
+  }
+  &-forgot {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

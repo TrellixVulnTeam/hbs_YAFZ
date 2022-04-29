@@ -1,0 +1,83 @@
+<div class="cart">
+  <p style="font-size: 25px; font-weight: bold">Gio hang</p>
+  <div class="cart-content">
+    <div class="cart-container">
+      <form action="/cart" method="post" class="cart-sub preventdefault">
+        <table style="border: 1px solid black; border-collapse:collapse">
+
+          <tr
+            style="background-color:  #20E3B2; border: none; outline: none; height: 50px;"
+          >
+            <th>Sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+            <th>Thành tiền</th>
+          </tr>
+
+          {{#each products}}
+
+            <tr>
+
+              <td>
+                <div class="cart-column-mega">
+                  <img src={{this.image}} alt="" />
+                  <button class="cart-column-mega-button">
+                    Xóa sản phẩm
+                  </button>
+                </div>
+              </td>
+              <td>
+                <div class="cart-column">
+
+                  <div class="cart-sub-quantity-control">
+                    {{! <div class="cart-minus">-</div> }}
+                    <input type="hidden" name="price" value="{{this.price}}" />
+                    <input
+                      type="number"
+                      name="quantity"
+                      class="cart-quanity"
+                      value="{{this.quantity}}"
+                    />
+                    {{! <div class="cart-increase">+</div> }}
+                  </div>
+                  <button
+                    class="cart-sub-quantity-submit"
+                    type="submit"
+                    formaction="/cart/update-qty/{{this.productId}}&key={{inc
+                      @index
+                    }}?_method=put"
+                  >Cập nhật</button>
+
+                </div>
+              </td>
+              <td>
+                <div class="cart-column">
+                  <p class="">{{numberalPrice this.price}}</p>
+                </div>
+              </td>
+              <td>
+                <div class="cart-column">
+                  <p class="">{{numberalPrice this.subtotal}}</p>
+                </div>
+              </td>
+            </tr>
+
+          {{/each}}
+        </table>
+      </form>
+    </div>
+    <div class="cart-redirect">
+      <div class="cart-redirect-title">
+        Total
+      </div>
+      <div class="cart-redirect-content">
+        <p class="cart-redirect-subtotal">Subtotal :
+          <span style="margin-left: 30px;">{{numberalPrice subtotal}}</span>
+        </p>
+        <p class="cart-redirect-shipping">Ship: 0$</p>
+      </div>
+      <p class="cart-redirect-total">Total : {{numberalPrice subtotal}}</p>
+      <a href="/order" class="cart-redirect-button">Tiếp theo</a>
+    </div>
+  </div>
+</div>

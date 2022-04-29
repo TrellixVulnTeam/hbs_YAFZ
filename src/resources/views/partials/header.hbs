@@ -1,0 +1,60 @@
+<header class="header">
+  <div class="header-top">
+    <div class="header-top-content">
+
+      <div class="header-title">Sale up to 50%</div>
+      <div class="header-menu">
+        <ul class="header-menu-list">
+          <li class="header-menu-item"><a href="#">Tin tuc</a></li>
+          <li class="header-menu-item"><a href="#">Lien he</a></li>
+
+          <li style="display: none" class="token">{{userId}}</li>
+
+          {{#if accessToken}}
+            <li class="header-menu-item"><a href="/log-out">Dang xuat</a></li>
+            <li class="header-menu-item"><a href="/cart">Gio hang</a></li>
+          {{else}}
+            <li class="header-menu-item"><a href="/register">Dang ky</a></li>
+            <li class="header-menu-item"><a href="/login">Dang nhap</a></li>
+          {{/if}}
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header-main">
+    <div class="header-main-content">
+      <div class="header-logo">
+        <a href="/"><img
+            src="https://mcdn.nhanh.vn/store/2442/bn/sb_1581066834_441.jpg"
+            alt=""
+          /></a>
+      </div>
+      <div class="header-search">
+        <form action="/search" method="post">
+          <input type="text" name="search" id="search" />
+          <button type="submit" class="header-search-button"><ion-icon
+              name="search-outline"
+            ></ion-icon></button>
+        </form>
+      </div>
+      <div class="header-phone">
+        <p><ion-icon name="call-outline"></ion-icon></p>
+        <p>Hotline: 035 799 8668</p>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="header-bottom-content">
+      <ul class="header-bottom-content-list">
+        {{#each cates}}
+          <li
+            class="header-bottom-content-item"
+            style="text-transform: uppercase;"
+          ><a href="#">{{this.nameCate}}</a></li>
+        {{/each}}
+
+      </ul>
+    </div>
+  </div>
+</header>

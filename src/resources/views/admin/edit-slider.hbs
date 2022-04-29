@@ -1,0 +1,11 @@
+<form  class="admin-form-add" method="post" action="/admin/edit-slider/{{slider._id}}?_method=put" >
+    <div class="admin-form-add-item">
+        <label for="nameSlider">Tên Slider</label>
+        <input type="text" name="nameSlider" id="nameSlider" value="{{slider.nameSlider}}">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="url">Ảnh </label>
+        <input type="text" name="url" id="url" value="{{slider.url}}">
+    </div>
+    <button type="submit" class="admin-form-add-submit">Sua</button>
+</form>

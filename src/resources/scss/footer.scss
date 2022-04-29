@@ -1,0 +1,28 @@
+.footer {
+  width: 100%;
+  background-color: black;
+  &-content {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 40px;
+    &-list {
+      display: flex;
+      width: 1170px;
+    }
+    &-item {
+      width: 292.5px !important;
+      color: white;
+      //   margin-right: 20px;
+      display: block;
+      p {
+        &:first-child {
+          padding-bottom: 10px;
+          border-bottom: 1px solid white;
+        }
+        &:nth-child(2) {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}

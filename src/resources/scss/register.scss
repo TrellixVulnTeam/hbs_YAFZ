@@ -1,0 +1,32 @@
+.register {
+  width: 100%;
+  background-color: #f6f3f3;
+  &-content {
+    width: 1140px;
+    margin: 0 auto;
+    background: #f6f3f3;
+    padding: 30px;
+  }
+  &-form {
+    width: 420px;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 0 auto;
+    background: #fafafa;
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      //   font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: black;
+      color: white;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+}

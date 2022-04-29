@@ -1,0 +1,37 @@
+<div class="order">
+  <h2 style="margin-left: 10px;">Order</h2>
+  <div class="order-container">
+    <form action="/order" method="post" class="order-form">
+      <div class="order-info">
+
+        <div class="order-item">
+          <label for="">Ho ten</label>
+          <input type="text" name="name" value="{{username}}" />
+        </div>
+        <div class="order-item">
+          <label for="">So dien thoai</label>
+          <input type="text" name="phone" value="{{phone}}" />
+        </div>
+        <div class="order-item">
+          <label for="">Địa chỉ</label>
+          <input type="text" name="address" />
+        </div>
+        <div class="order-item">
+          <label for="">Ghi chú</label>
+          <textarea type="text" name="note"></textarea>
+        </div>
+        <div class="order-method-payment">
+          <div class="order-method-payment-item">
+            <input type="radio" name="payment" id="home" value="tai nha" />
+            <label for="home">Tại nhà</label>
+          </div>
+          <div class="order-method-payment-item">
+            <input type="radio" name="payment" id="card" value="the" />
+            <label for="card">Online</label>
+          </div>
+        </div>
+      </div>
+      <button type="submit">Thanh toan</button>
+    </form>
+  </div>
+</div>

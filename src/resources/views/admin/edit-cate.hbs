@@ -1,0 +1,11 @@
+<form  class="admin-form-add" method="post" action="/admin/edit-cate/{{cates._id}}?_method=put" >
+    <div class="admin-form-add-item">
+        <label for="nameCate">Tên thương hiệu</label>
+        <input type="text" name="nameCate" id="nameCate" value="{{cates.nameCate}}">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="imageCate">Ảnh </label>
+        <input type="text" name="imageCate" id="imageCate" value="{{cates.imageCate}}">
+    </div>
+    <button type="submit" class="admin-form-add-submit">Sửa thương hiệu</button>
+</form>

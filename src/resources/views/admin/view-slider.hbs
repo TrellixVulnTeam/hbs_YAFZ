@@ -1,0 +1,25 @@
+<table class="tbl">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên Slider</th>
+            <th>Hình ảnh</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each slider }}
+            <tr>
+                <td>{{sum @index 1}}</td>
+                <td>{{this.nameSlider}}</td>
+                <td class="tbl-image"><img src="{{this.url}}" alt=""></td>
+                <td>
+                    <a href="/admin/edit-slider/{{this._id}}">Sửa</a>
+                    <a href="" class="active-modal-slider" data-id="{{this._id}}">Xóa</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<form method="post" class="form-delete-slider"></form>

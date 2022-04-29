@@ -1,0 +1,130 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  // border: 1px solid #ddd;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  &-top {
+    width: 260px;
+    height: 260px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-related {
+    width: 1170px;
+    margin: 0 auto;
+    &-title {
+      width: 100%;
+      text-align: center;
+      background-color: brown;
+      padding: 5px;
+      color: white;
+    }
+    &-content {
+      margin: 10px 0;
+      width: 100%;
+      --columns: 4;
+      --gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+      grid-gap: var(--gap);
+    }
+  }
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  &-name {
+    // display: flex;
+    // justify-content: center;
+    // margin-bottom: 20px;
+    color: black;
+    font-weight: 500;
+    max-width: max-content;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    text-transform: uppercase;
+  }
+  &-price {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: rgb(158, 13, 13);
+  }
+  &-detail {
+    width: 100%;
+    background: white;
+    &-content {
+      width: 1170px;
+      margin: 20px auto;
+      display: flex;
+      &-left {
+        width: 680px;
+      }
+      &-right {
+        width: 490px;
+        padding: 0 20px;
+        &-name {
+          font-size: 25px;
+          font-weight: 500;
+        }
+        &-price {
+          font-size: 25px;
+          text-align: center;
+          font-weight: 500;
+          margin: 5px 0;
+        }
+        &-num {
+          font-size: 18px;
+          // margin-bottom: 30px;
+        }
+        &-desc {
+          font-weight: 500;
+        }
+      }
+    }
+    &-img {
+      &-main {
+        width: 680px;
+        height: 680px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-list {
+        display: flex;
+        width: 680px;
+      }
+      &-item {
+        width: 130px;
+        height: 130px;
+        margin: 10px;
+        // padding: 10px;
+        cursor: pointer;
+        border: 1px solid brown;
+        &.active {
+          border: 1px solid red;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

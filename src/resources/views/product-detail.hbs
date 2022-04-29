@@ -1,0 +1,59 @@
+<div class="product-detail">
+  <div class="product-detail-content">
+    <div class="product-detail-content-left">
+      <div class="product-detail-img-main">
+        <img src={{product.image}} alt="" />
+      </div>
+      <div class="product-detail-img-list">
+        <div class="product-detail-img-item active">
+          <img src={{product.image}} alt="" />
+        </div>
+        <div class="product-detail-img-item">
+          <img src={{product.image2}} alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="product-detail-content-right">
+      <p class="product-detail-content-right-name">{{product.name}}</p>
+      <p class="product-detail-content-right-desc">{{product.desc}}</p>
+      <p class="product-detail-content-right-price">{{product.price}}</p>
+      <p class="product-detail-content-right-num">Số lượng:</p>
+      <form action="" method="post" class="add-cart">
+        <div class="add-cart-num">
+          <div class="add-cart-minus">-</div>
+          <input type="text" value="1" name="number" />
+          <div class="hidden">{{product.number}}</div>
+          <input type="hidden" name="productId" value="{{product._id}}" />
+          {{! <input type="hidden" name="userId" class="token-link" value=""> }}
+          {{! <div class="hidden token-link" name="id"></div> }}
+          <input type="hidden" name="name" value="{{product.name}}" />
+          <input type="hidden" name="desc" value="{{product.desc}}" />
+          <input type="hidden" name="price" value="{{product.price}}" />
+          <input type="hidden" name="image" value="{{product.image}}" />
+          <input type="hidden" name="slug" value="{{product.slug}}" />
+          <div class="add-cart-increase">+</div>
+        </div>
+        <button class="add-cart-button" type="submit">Đặt hàng</button>
+      </form>
+    </div>
+  </div>
+  <div class="product-related">
+    <p class="product-related-title">Sản phẩm liên quan</p>
+    <div class="product-related-content">
+      {{#each proRelated}}
+
+        <div class="product">
+          <div class="product-top">
+            <img src={{this.image}} alt="" />
+          </div>
+          <div class="product-bottom">
+            <a href="#" class="product-name">
+              {{this.name}}
+            </a>
+            <div class="product-price">{{this.price}}</div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

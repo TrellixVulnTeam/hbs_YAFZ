@@ -1,0 +1,25 @@
+<table class="tbl">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên thương hiệu</th>
+            <th>Hình ảnh</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each cates }}
+            <tr>
+                <td>{{sum @index 1}}</td>
+                <td>{{this.nameCate}}</td>
+                <td class="tbl-image"><img src="{{this.imageCate}}" alt=""></td>
+                <td>
+                    <a href="/admin/edit-cate/{{this._id}}">Sửa</a>
+                    <a href="" class="active-modal-cate" data-id="{{this._id}}">Xóa</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<form method="post" class="form-delete-cate"></form>

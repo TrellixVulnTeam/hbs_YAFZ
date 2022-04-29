@@ -1,0 +1,135 @@
+.admin {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background: #20E3B2
+  }
+  &-logout{
+    a{
+      padding: 10px;
+      background: black;color: white;
+      text-decoration: none;
+    }
+  }
+  &-login {
+      width: 400px;
+      padding: 20px;
+      display: block;
+      margin: 50px auto;
+      // display: flex;
+      // justify-content: center;
+      // align-items:center;
+      // background-color: #20E3B2;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      &-layout{
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+        width: 100%;
+        input{
+          width: 100%;
+          padding: 10px ;
+        }
+        button{
+          padding: 10px;
+          background-color: black;
+          color: white;
+        }
+      }
+  }
+  &-menu {
+    position: fixed;
+    background: #20E3B2;
+    left: 0;
+    top: -50%;
+    width: 300px;
+    height: 100vh;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    // padding: 20px;
+    // margin-top: 20px;
+    transition: 0.25s linear;
+    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    &.active {
+      top:0;
+      opacity: 1;
+      visibility: visible;
+    }
+    &-list {
+      // margin-top: 20px;
+      padding: 50px 20px;
+    }
+    &-button {
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 200;
+      ion-icon {
+        pointer-events: none;
+      }
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 2px solid black;
+      cursor: pointer;
+      margin-bottom: 10px;
+      span {
+        text-align: left;
+        display: inline-block;
+        pointer-events: none;
+      }
+      &.active .admin-menu-item-drop-item {
+        display: block;
+      }
+      &-drop {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        &-item {
+          display: none;
+          transition: 0.25s linear;
+          a{
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  &-form {
+    &-add {
+      width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 50px auto;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 20px;
+      &-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        input {
+          width: 100%;
+          padding: 15px 20px;
+        }
+        input[type="checkbox"] {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &-submit {
+        width: 100%;
+        padding: 15px 20px;
+        background: black;
+        color: white;
+        margin-top: 12px;
+      }
+    }
+  }
+}

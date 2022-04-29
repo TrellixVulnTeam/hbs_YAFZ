@@ -1,0 +1,49 @@
+.add {
+  &-cart {
+    width: 100%;
+    margin: 20px 0;
+    input {
+      width: 60px;
+      height: 38px;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 100;
+    }
+    &-button {
+      width: 100%;
+      height: 40px;
+      //   text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+    &-num {
+      display: flex;
+    }
+    &-minus {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    &-increase {
+      width: 38px;
+      height: 38px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+  }
+}

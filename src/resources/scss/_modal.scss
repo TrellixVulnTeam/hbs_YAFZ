@@ -1,0 +1,34 @@
+.modal {
+  &-delete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+
+    &-button {
+      width: 100px;
+      padding: 10px;
+      margin: 5px;
+      outline: none;
+      border: none;
+      &-group {
+        display: flex;
+        justify-content: center;
+        // margin: 0 auto;
+      }
+    }
+    &-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<form  class="admin-form-add" method="post" action="/admin/edit-pro/{{product._id}}?_method=put" >
+    <div class="admin-form-add-item">
+        <label for="name">Tên sản phẩm</label>
+        <input type="text" name="name" id="name" value="{{product.name}}">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="image">Ảnh 1</label>
+        <input type="text" name="image" id="image" value="{{product.image}}">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="image2">Ảnh 2</label>
+        <input type="text" name="image2" id="image" value="{{product.image2}}">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="price">Giá sản phẩm</label>
+        <input type="text" name="price" id="price" value="{{product.price}}">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="hot">Hot</label>
+        <input type="text" name="hot" id="hot" value="{{product.hot}}">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="desc">Thông tin</label>
+        <input type="text" name="desc" id="desc" value="{{product.desc}}">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="number">Số lượng</label>
+        <input type="text" name="number" id="number" value="{{product.number}}">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="cate">Thương hiệu</label>
+        <input type="text" name="cate" id="cate" value="{{product.cate}}">
+    </div>
+    <button type="submit" class="admin-form-add-submit">Sửa sản phẩm</button>
+</form>

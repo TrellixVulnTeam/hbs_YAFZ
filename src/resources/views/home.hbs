@@ -1,0 +1,59 @@
+<div class="slider">
+  <div class="slider-list">
+    <div class="slider-item active">
+      <img src="/img/banner.jpg" alt="" />
+    </div>
+    <div class="slider-item">
+      <img src="/img/banner.jpg" alt="" />
+    </div>
+  </div>
+  <div class="slider-left"><ion-icon
+      name="chevron-back-outline"
+    ></ion-icon></div>
+  <div class="slider-right"><ion-icon
+      name="chevron-forward-outline"
+    ></ion-icon></div>
+</div>
+
+<div class="shop">
+  <div class="shop-content">
+    <div class="shop-header">
+      <p class="shop-header-tab active" data-tab="new">San pham moi</p>
+      <p class="shop-header-tab" data-tab="hot">San pham hot</p>
+    </div>
+
+    <div class="shop-subcontent">
+      <div class="shop-subcontent-small active" data-tab="new">
+
+        {{#each products}}
+          <div class="product">
+            <div class="product-top">
+              <img src="{{this.image}}" alt="" />
+            </div>
+            <div class="product-bottom">
+              <a href="/product/{{this.slug}}" class="product-name">
+                {{this.name}}
+              </a>
+              <div class="product-price">{{this.price}}</div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+      <div class="shop-subcontent-small" data-tab="hot">
+        {{#each proHot}}
+          <div class="product">
+            <div class="product-top">
+              <img src="{{this.image}}" alt="" />
+            </div>
+            <div class="product-bottom">
+              <a href="/product/{{this.slug}}" class="product-name">
+                {{this.name}}
+              </a>
+              <div class="product-price">{{this.price}}</div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

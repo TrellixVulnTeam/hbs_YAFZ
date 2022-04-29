@@ -1,0 +1,29 @@
+<table class="tbl">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Tên</th>
+      <th>Địa chỉ</th>
+      <th>Pttt</th>
+      <th>Trạng thái</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each orders}}
+      <tr>
+        <td>{{sum @index 1}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.address}}</td>
+        <td>{{this.payment}}</td>
+        <td>{{this.status}}</td>
+        <td>
+          <a href="/admin/accept/{{this._id}}">Xác nhận</a>
+          <a href="" class="active-modal" data-id="{{this._id}}">Xóa</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<form method="post" class="form-delete-order"></form>

@@ -1,0 +1,19 @@
+<div class="search-container">
+    <div class="search-link"><a href="/" class="">Trang chủ</a><p>Search results for "vans" </p></div>
+    <div class="search-title">Tìm kiếm: Van</div>
+    <div class="search-content">        
+                {{#each products }}
+                    <div class="product">
+                        <div class="product-top">
+                            <img src="{{this.image}}" alt="">
+                        </div>
+                        <div class="product-bottom">
+                            <a href="/product/{{this.slug}}" class="product-name">
+                                {{this.name}}
+                            </a>
+                            <div class="product-price">{{this.price}}</div>
+                        </div>
+                    </div>
+                {{/each}}
+    </div>
+</div>

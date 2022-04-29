@@ -1,0 +1,59 @@
+.order{
+    padding: 100px 100px;
+
+    &-container{
+        width: 100%;
+        // margin-top: 50px;
+        // margin-bottom: 50px;
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid black;
+
+    }
+    &-form{
+        width: 100%;
+        padding: 20px 50px;
+    }
+    &-info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+    }
+    &-item{
+        width: 100%;
+        display: flex;
+        // justify-content: center;
+        align-items:center;
+        label{
+            min-width: 100px;
+        }
+        input{
+            flex:1;
+            padding: 10px;
+        }
+        textarea{
+            flex: 1;
+            padding: 10px;
+            min-height: 100px;
+            outline: none;  
+        }
+    }
+    &-method-payment{
+        display: flex;
+        gap: 0 20px;
+        &-item{
+            display: flex;
+            gap: 0 5px;
+            align-items: center;
+            min-height: 30px;
+        }
+    }
+    button{
+        width: 100%;
+        padding: 20px;
+        background-color: black;
+        color: white;
+        margin-top: 20px;
+    }
+}

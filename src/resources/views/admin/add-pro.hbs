@@ -1,0 +1,43 @@
+<form  class="admin-form-add" method="post" action="" >
+    <div class="admin-form-add-item">
+        <label for="name">Tên sản phẩm</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="image">Ảnh 1</label>
+        <input type="text" name="image" id="image">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="image2">Ảnh 2</label>
+        <input type="text" name="image2" id="image">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="price">Giá sản phẩm</label>
+        <input type="text" name="price" id="price">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="hot">Hot</label>
+        <input type="text" name="hot" id="hot">
+    </div>
+    {{!-- <div class="admin-form-add-item">
+        <label for="sale">Sale</label>
+        <input type="checkbox" name="sale" id="sale">
+    </div> --}}
+    <div class="admin-form-add-item">
+        <label for="desc">Thông tin</label>
+        <input type="text" name="desc" id="desc">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="number">Số lượng</label>
+        <input type="text" name="number" id="number">
+    </div>
+    <div class="admin-form-add-item">
+        <label for="cate">Thương hiệu</label>
+        <select style="padding: 15px 20px;outline: none;" name="cate" id="cate">
+            {{#each cates}}
+                <option value="{{this._id}}">{{this.nameCate}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <button type="submit" class="admin-form-add-submit">Thêm sản phẩm</button>
+</form>

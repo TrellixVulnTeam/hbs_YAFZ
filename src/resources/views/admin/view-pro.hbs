@@ -1,0 +1,29 @@
+<table class="tbl">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên sản phẩm</th>
+            <th>Hình ảnh</th>
+            <th>Giá sản phẩm</th>
+            <th>Số lượng còn</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products }}
+            <tr>
+                <td>{{sum @index 1}}</td>
+                <td>{{this.name}}</td>
+                <td class="tbl-image"><img src="{{this.image}}" alt=""></td>
+                <td>{{this.price}}</td>
+                <td>{{this.number}}</td>
+                <td>
+                    <a href="/admin/edit-pro/{{this._id}}">Sửa</a>
+                    <a href="" class="active-modal" data-id="{{this._id}}">Xóa</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<form method="post" class="form-delete"></form>
